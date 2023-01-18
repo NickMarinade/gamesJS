@@ -10,13 +10,31 @@
 
 section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 10vh;
+    text-align: center;
+    align-items: center;
+    margin-top: 30vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 5px;
+    margin-bottom: 1vh;
+    color: #2196f3;
+    border-radius: 15%;
+    border-color: #2196f3;
 }
 
 button {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     padding: 15px 50px;
     color: #2196f3;
     text-transform: uppercase;
@@ -26,6 +44,7 @@ button {
     overflow: hidden;
     transition: 0.2s;
     border: none;
+    width: 40% ;
 }
 
 .button__line--top {
