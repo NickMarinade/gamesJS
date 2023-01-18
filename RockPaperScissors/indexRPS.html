@@ -13,7 +13,7 @@
     <div class="main">
         <h1 class="title">Rock - Paper - Scissors </h1>
         <p class="condition">First to score 10 is a winner</p>
-        <p class="finalResult">Final result</p>
+        <p class="finalResult">Await for the final result...</p>
         <div class="score">
             <span class="humanScore">0</span>
             :
@@ -24,12 +24,23 @@
                 <i class="fa-solid fa-hand-back-fist boxIcon boxIconRock"></i>
             </div>
             <div class="box">
-                <i class="fa-solid fa-hand boxIcon boxIconRock"></i>
+                <i class="fa-solid fa-hand boxIcon boxIconPaper"></i>
             </div>
             <div class="box">
-                <i class="fa-solid fa-hand-scissors boxIcon boxIconRock"></i>
+                <i class="fa-solid fa-hand-scissors boxIcon boxIconScissors"></i>
             </div>
         </div>
+        <div class="choices">
+            <div class="choice">
+                <p>Human choice</p>
+                <p class="choiceText choiceTextHuman"></p>
+            </div>
+            <div class="choice">
+                <p>Machine choice</p>
+                <p class="choiceText choiceTextMachine"></p>
+            </div>
+        </div>
+        <button class="button">Play Again</button>
     </div>
 </body>
 </html>

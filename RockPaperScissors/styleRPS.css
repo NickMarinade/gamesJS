@@ -5,5 +5,118 @@
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
-    
 }
+
+body {
+    background-color: rgb(47, 43, 43);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: rgb(225, 237, 237);
+    transition: .2s;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+}
+
+.condition {
+    padding-top: 8px;
+        font-size: 20px;
+}
+
+.finalResult {
+    font-size: 42px;
+    padding: 16px 0;
+    color: rgb(93, 193, 93);
+    visibility: hidden;
+}
+
+.finalResult .choiceText .is-visible {
+    visibility: visible;
+}
+
+.score {
+    font-size: 28px;
+}
+
+.boxes {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    margin: 48px 0;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid rgb(75, 74, 74);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.box:hover {
+    background: rgb(128, 122, 122);
+}
+
+.boxIcon {
+    font-size: 36px;
+    transition: .2s;
+}
+
+.boxIconRock {
+    color: yellow;
+}
+
+.boxIconPaper {
+    color: rgb(125, 213, 48);
+}
+
+.boxIconScissors {
+    color: rgb(199, 63, 90);
+}
+
+.choices {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+}
+
+.choice {
+    font-size: 22px;
+    text-align: center;
+}
+
+.choiceText {
+    padding-top: 8px;
+    font-size: 28px;
+    visibility: hidden;
+}
+
+.button {
+    min-width: 180px;
+    margin-top: 60px;
+    background: rgb(117, 9, 9);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color:rgb(249, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background:rgb(224, 37, 37);
+}
+
