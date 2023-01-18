@@ -24,7 +24,7 @@ input {
     justify-content: center;
     text-align: center;
     padding: 5px 5px;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     color: #2196f3;
     border-radius: 15%;
     border-color: #2196f3;
@@ -45,6 +45,7 @@ button {
     transition: 0.2s;
     border: none;
     width: 40% ;
+    margin-bottom: 3vh;
 }
 
 .button__line--top {
