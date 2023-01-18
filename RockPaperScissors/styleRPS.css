@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: rgb(225, 237, 237);
+    color: rgb(43, 108, 108);
     transition: .2s;
 }
 
@@ -35,12 +35,8 @@ body {
     font-size: 42px;
     padding: 16px 0;
     color: rgb(93, 193, 93);
-    visibility: hidden;
 }
 
-.finalResult .choiceText .is-visible {
-    visibility: visible;
-}
 
 .score {
     font-size: 28px;
@@ -66,7 +62,7 @@ body {
 }
 
 .box:hover {
-    background: rgb(128, 122, 122);
+    background: rgb(242, 236, 236);
 }
 
 .boxIcon {
@@ -100,23 +96,5 @@ body {
 .choiceText {
     padding-top: 8px;
     font-size: 28px;
-    visibility: hidden;
-}
-
-.button {
-    min-width: 180px;
-    margin-top: 60px;
-    background: rgb(117, 9, 9);
-    outline: none;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    color:rgb(249, 255, 255);
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background:rgb(224, 37, 37);
 }
 
