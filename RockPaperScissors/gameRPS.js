@@ -69,7 +69,15 @@ function updateBoard(moveResult, humanPick, machinePick) {
     getHumanScore.textContent = humanScore;
     getMachineScore.textContent = machineScore;
 
-    humanScore == 10 ? getFinalResult.textContent = 'Winner Winner Chiken Dinner!' : null;
-    machineScore == 10 ? getFinalResult.textContent = 'You lost, human!' : null;
+    humanScore == 3 ? getFinalResult.textContent = 'Winner Winner Chiken Dinner!' : null;
+    machineScore == 3 ? getFinalResult.textContent = 'You lost, human!' : null;
+
+    if(humanScore == 3 || machineScore == 3) {
+        getFinalResult.classList.add('isVisible');
+
+        for(let sign of getSigns) {
+            sign.classList.add('isInactive');
+        }
+    }
 }
 
