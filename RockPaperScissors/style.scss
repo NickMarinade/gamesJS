@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #252525;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: whitesmoke;
+    transition: .2s;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+}
+
+.condition {
+    padding-top: 8px;
+    font-size: 20px;
+}
+
+.finalResult {
+    font-size: 42px;
+    padding: 16px 0;
+    color: rgb(93, 193, 93);
+    visibility: hidden;
+
+    &.isVisible {
+        visibility: visible;
+    }
+}
+
+
+.score {
+    font-size: 28px;
+}
+
+.boxes {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    margin: 48px 0;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid rgb(75, 74, 74);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+
+    &.isInactive {
+        pointer-events: none;
+        background: lighten(#252525, 5%);
+    }
+
+    &:hover {
+        background: lighten(#252525, 5%);
+
+        .boxIcon {
+            transform: scale(1.1);
+        }
+    }
+
+    .boxIcon {
+        font-size: 35px;
+        transition: .2s;
+    }
+
+    .boxIconRock {
+        color: yellow;
+    }
+    
+    .boxIconPaper {
+        color: rgb(125, 213, 48);
+    }
+    
+    .boxIconScissors {
+        color: rgb(199, 63, 90);
+    }
+    
+}
+
+.choices {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+}
+
+.choice {
+    font-size: 22px;
+    text-align: center;
+}
+
+.choiceText {
+    padding-top: 8px;
+    font-size: 28px;
+    visibility: hidden;
+    text-transform: capitalize;
+
+    &.is-visible {
+        visibility: visible;
+    }
+}
+
+.button {
+    min-width: 180px;
+    margin-top: 60px;
+    background: darken(rgb(196, 21, 21), 5%);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color:whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background: rgb(196, 21, 21);
+    }
+}
+
