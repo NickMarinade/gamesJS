@@ -90,7 +90,7 @@ function updateBoard(moveResult, humanPick, machinePick) {
     humanScore == 3 ? getFinalResult.textContent = 'Winner Winner Chiken Dinner!' : null;
     machineScore == 3 ? getFinalResult.textContent = 'You Lost, human!' : null;
     
-    if(machineScore == 3) {
+    if(machineScore === 3) {
         getFinalResult.style.color = 'red';
     }
 
