@@ -92,6 +92,8 @@ function updateBoard(moveResult, humanPick, machinePick) {
     
     if(machineScore === 3) {
         getFinalResult.style.color = 'red';
+    } else {
+        getFinalResult.style.color = 'rgb(93, 193, 93)';
     }
 
     if(humanScore == 3 || machineScore == 3) {
