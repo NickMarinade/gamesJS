@@ -102,7 +102,7 @@ body {
   visibility: hidden;
   text-transform: capitalize;
 }
-.choiceText.is-visible {
+.choiceText.isVisible {
   visibility: visible;
 }
 
