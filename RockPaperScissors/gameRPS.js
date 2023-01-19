@@ -16,7 +16,25 @@ let getFinalResult = getMainDiv.querySelector('.finalResult');
 let getChoiceTexts = getMainDiv.querySelectorAll('.choiceText');
 let humanChoiceText = getMainDiv.querySelector('.choiceTextHuman');
 let machineChoiceText = getMainDiv.querySelector('.choiceTextMachine'); 
+
 let getPlayAgainButton = getMainDiv.querySelector('.button');
+
+getPlayAgainButton.addEventListener('click', resetGame);
+
+function resetGame() {
+    humanScore = 0;
+    machineScore = 0;
+    getHumanScore.textContent = '0';
+    getMachineScore.textContent = '0';
+
+    getFinalResult.classList.remove('isVisible');
+    humanChoiceText.classList.remove('isVisible');
+    machineChoiceText.classList.remove('isVisible');
+
+    for(let sign of getSigns) {
+        sign.classList.remove('isInactive');
+    }
+}
 
 for (let sign of getSigns) {
     sign.addEventListener('click', makeMove);
