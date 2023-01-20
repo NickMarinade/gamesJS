@@ -7,14 +7,18 @@
     font-family: "Montserrat", sans-serif;
 }
 
+img {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2vh;
-    background-image: url(./image/poker-table-green-fabric-ehvbvg2v8010o3sx.jpg);
-    background-size: contain;
+    background-image: url(./images/poker-table-green-fabric-ehvbvg2v8010o3sx.jpg);
+    background-size: cover;
     color: whitesmoke;
 }
 
@@ -26,16 +30,19 @@ body {
     padding-top: 60px;
 }
 
+.playerName {
+    background-color: rgb(5, 72, 25);
+}
+
 .dealerHand {
     height: 160px;
-    background-color:rgb(5, 72, 25);
-    opacity: .5;
+    background-color:rgba(5, 72, 25, 0.5);
 }
 
 .playerHand {
     height: 160px;
-    background-color:rgb(9, 57, 23);
-    opacity: .5;
+    background-color:rgba(9, 57, 23, 0.5);
+    
 }
 
 .buttons {
