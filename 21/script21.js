@@ -6,6 +6,7 @@
 //     imageBack.src = 'images/back.png'
 //     document.querySelector('.dealerHand').append(imageBack);
 
+let dealerBack = {"image": 'images/back.png' };
 let dealButton = document.querySelector('#dealButton');
 let hitButton = document.querySelector('#hitButton');
 let standButton = document.querySelector('#standButton');
@@ -73,6 +74,16 @@ dealButton.addEventListener('click', () => {
 
     playerPoints.innerHTML = plrPoint;
 
+    imageDealer.innerHTML += `<img src="${dealerArr[0].image}" alt=""></img>`;
+    imageDealer.innerHTML += `<img src="${dealerBack.image}" alt=""></img>`;
 
+    for (let i=0; i < playerArr.length; i++ ) {
+        imagePlayer.innerHTML += `<img src="${playerArr[i].image}" alt=""></img>`
+    }
+
+
+    if(plrPoint === 21) {
+        gameOver.innerHTML = '21, you won! Game is over!';
+    }
 })
 
