@@ -6,6 +6,15 @@
 //     imageBack.src = 'images/back.png'
 //     document.querySelector('.dealerHand').append(imageBack);
 
+const audio = new Audio("shuffling-cards-6.mp3");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    audio.play();
+  });
+});
+
 let dealerBack = {"image": 'images/back.png' };
 let dealButton = document.querySelector('#dealButton');
 let hitButton = document.querySelector('#hitButton');
