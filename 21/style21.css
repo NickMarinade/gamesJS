@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    background-image: url(./image/poker-table-green-fabric-ehvbvg2v8010o3sx.jpg);
+    background-size: contain;
+    color: whitesmoke;
+}
+
+.table {
+    width: 60%;
+}
+
+.table > * {
+    padding-top: 60px;
+}
+
+.dealerHand {
+    height: 160px;
+    background-color:rgb(5, 72, 25);
+    opacity: .5;
+}
+
+.playerHand {
+    height: 160px;
+    background-color:rgb(9, 57, 23);
+    opacity: .5;
+}
+
+.buttons {
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+  
+  background: rgb(5, 59, 21);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 10px;
+  color: whitesmoke;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  background: rgb(124, 204, 92);
+}
+
+.gameOver {
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 25px;
+}
