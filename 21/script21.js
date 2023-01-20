@@ -64,7 +64,7 @@ dealButton.addEventListener('click', () => {
         dlrPoint = dealerArr[0].value + dealerArr[1].value
     } 
 
-    dealerPoints.innerHTML = dlrPoint;
+    // dealerPoints.innerHTML = dlrPoint;
 
     if (playerArr.some(card => card.card === 'ace' )) {
         if(playerArr[0].card === 'ace' && playerArr[1].card !== 'ace') {
@@ -94,5 +94,33 @@ dealButton.addEventListener('click', () => {
     if(plrPoint === 21) {
         gameOver.innerHTML = '21, you won! Game is over!';
     }
+});
+
+
+hitButton.addEventListener('click', () => {
+
+    let randomCard = deck[Math.floor(Math.random()*deck.length)];
+    let index = deck.findIndex(d => d===randomCard)
+    deck.splice(index,1);
+    playerArr.push(randomCard);
+    
+    for (let i= (playerArr.length -1); i < playerArr.length; i++){
+        imagePlayer.innerHTML += `<img src="${playerArr[i].image}" alt=""></img>`
+    
+        if (playerArr[i].card == 'ace'){
+            if (plrPoint<=10){
+                plrPoint+= playerArr[i].value2;
+            } else {
+                plrPoint+= playerArr[i].value1;
+            }
+        } else {
+            plrPoint+= playerArr[i].value;
+        }
+        playerPoints.innerHTML=plrPoint
+       }
+    
+       if(plrPoint>21){
+        gameOver.innerHTML = "You bust! Game is over. You lost!"
+       }
 })
 

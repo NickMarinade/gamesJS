@@ -70,7 +70,11 @@ button:hover {
 
 .gameOver {
     width: 100%;
-    padding-top: 50px;
+    margin-top: 50px;
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     font-size: 25px;
+    background-color: rgba(124, 204, 92, 0.8);
 }
