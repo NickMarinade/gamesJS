@@ -92,7 +92,7 @@ dealButton.addEventListener('click', () => {
 
 
     if(plrPoint === 21) {
-        gameOver.innerHTML = '21, you won! Game is over!';
+        gameOver.innerHTML = '21, you win! Game is over!';
     }
 });
 
@@ -108,7 +108,7 @@ hitButton.addEventListener('click', () => {
         imagePlayer.innerHTML += `<img src="${playerArr[i].image}" alt=""></img>`
     
         if (playerArr[i].card == 'ace'){
-            if (plrPoint<=10){
+            if (plrPoint <= 10){
                 plrPoint+= playerArr[i].value2;
             } else {
                 plrPoint+= playerArr[i].value1;
@@ -119,8 +119,71 @@ hitButton.addEventListener('click', () => {
         playerPoints.innerHTML=plrPoint
        }
     
-       if(plrPoint>21){
+       if (plrPoint > 21){
         gameOver.innerHTML = "You bust! Game is over. You lost!"
        }
-})
+});
+
+
+
+standButton.addEventListener('click', () => {
+    dealButton.setAttribute("disabled", "");
+    hitButton.setAttribute("disabled", "");
+    
+    if (dlrPoint <= 16) {
+        let randomCard = deck[Math.floor(Math.random()*deck.length)];
+        let index = deck.findIndex(d => d===randomCard)
+        deck.splice(index,1);
+        dealerArr.push(randomCard);
+
+        imageDealer.innerHTML = '';
+        for (let i=0; i < dealerArr.length; i++){
+
+            imageDealer.innerHTML += `<img src='${dealerArr[i].image}' alt=''></img>`};
+
+            for (let i=2; i < dealerArr.length; i++){
+                if (dealerArr[i].card == 'ace') {
+                    if (dlrPoint <= 10) {
+                        dlrPoint += dealerArr[i].value2;
+                    } else {
+                        dlrPoint += dealerArr[i].value1;
+                    }
+                } else {
+                    dlrPoint += dealerArr[i].value;
+                }   
+            }
+
+            dealerPoints.innerHTML = dlrPoint;
+            if (dlrPoint > 21) {
+                gameOver.innerHTML = 'Dealer bust! You win! Game over!';
+            } else {
+                if (dlrPoint > plrPoint) {
+                    gameOver.innerHTML = 'Dealer win! Game over!';
+                } else if (dlrPoint == plrPoint) {
+                    gameOver.innerHTML = "It's a tie!";
+                } else {
+                    gameOver.innerHTML = 'You win! Game over!';
+                }
+            }
+    } else {
+        imageDealer.innerHTML = '';
+        for (let i=0; i < dealerArr.length; i++) {
+            imageDealer.innerHTML += `<img src="${dealerArr[i].image}" alt=""></img>`
+        }
+
+        if (dlrPoint > plrPoint) {
+            if (dlrPoint <= 21) {
+                gameOver.innerHTML = 'Dealer win! Game over!'; 
+            } else {
+                gameOver.innerHTML = 'Dealer bust! You win! Game over!';
+            }
+        } else if (dlrPoint == plrPoint) {
+            gameOver.innerHTML = "It's a tie!";
+        } else {
+            gameOver.innerHTML = 'You win! Game over!';
+        }
+
+        dealerPoints.innerHTML = dlrPoint;
+    }
+});
 
