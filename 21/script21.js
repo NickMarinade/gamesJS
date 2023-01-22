@@ -1,10 +1,3 @@
-// let image = document.createElement('img');
-//     image.src = deckOfCards[0].image;
-//     document.querySelector('.dealerHand').append(image);
-
-// let imageBack = document.createElement('img');
-//     imageBack.src = 'images/back.png'
-//     document.querySelector('.dealerHand').append(imageBack);
 
 const audio = new Audio("shuffling-cards-6.mp3");
 const buttons = document.querySelectorAll("button");
@@ -63,8 +56,6 @@ dealButton.addEventListener('click', () => {
     } else {
         dlrPoint = dealerArr[0].value + dealerArr[1].value
     } 
-
-    // dealerPoints.innerHTML = dlrPoint;
 
     if (playerArr.some(card => card.card === 'ace' )) {
         if(playerArr[0].card === 'ace' && playerArr[1].card !== 'ace') {
