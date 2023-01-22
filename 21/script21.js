@@ -129,7 +129,7 @@ hitButton.addEventListener('click', () => {
 standButton.addEventListener('click', () => {
     dealButton.setAttribute("disabled", "");
     hitButton.setAttribute("disabled", "");
-    
+
     if (dlrPoint <= 16) {
         let randomCard = deck[Math.floor(Math.random()*deck.length)];
         let index = deck.findIndex(d => d===randomCard)
@@ -185,5 +185,20 @@ standButton.addEventListener('click', () => {
 
         dealerPoints.innerHTML = dlrPoint;
     }
+});
+
+resetButton.addEventListener('click', ()=> {
+    dealerArr = [];
+    playerArr = [];
+    dlrPoint = [];
+    plrPoint = [];
+    dealerPoints.innerHTML = '';
+    playerPoints.innerHTML = '';
+    imageDealer.innerHTML = '';
+    imagePlayer.innerHTML = '';
+    gameOver.innerHTML = '';
+
+    dealButton.removeAttribute('disabled');
+    hitButton.removeAttribute('disabled');
 });
 
