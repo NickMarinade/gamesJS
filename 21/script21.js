@@ -29,6 +29,8 @@ let sum = 0;
 let dealerArr = [];
 let playerArr = [];
 
+let betButton
+
 dealButton.addEventListener('click', () => {
     for (let i = 0; i < 2; i++) {
         let randomCard = deck[Math.floor(Math.random()*deck.length)];

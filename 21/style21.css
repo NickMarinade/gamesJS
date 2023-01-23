@@ -23,7 +23,7 @@ body {
 }
 
 .table {
-    width: 60%;
+    width: 80%;
 }
 
 .table > * {
@@ -77,4 +77,8 @@ button:hover {
     align-items: center;
     font-size: 25px;
     background-color: rgba(124, 204, 92, 0.8);
+}
+
+.tableBet {
+    background-color:rgba(5, 72, 25, 0.5);
 }
