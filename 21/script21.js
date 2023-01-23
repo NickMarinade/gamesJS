@@ -24,12 +24,25 @@ let deck = deckOfCards;
 
 let plrPoint = 0;
 let dlrPoint = 0;
+
 let sum = 0;
 
 let dealerArr = [];
 let playerArr = [];
 
-let betButton
+let betButton = document.querySelector('#betButton');
+let betInput = document.querySelector('.input');
+
+let finalBalance = document.querySelector('.balance');
+
+let number = 0;
+
+betButton.addEventListener('click', () => {
+    let inputValue = document.querySelector('.input').value;
+
+    number = inputValue;
+
+})
 
 dealButton.addEventListener('click', () => {
     for (let i = 0; i < 2; i++) {
@@ -86,6 +99,8 @@ dealButton.addEventListener('click', () => {
 
     if(plrPoint === 21) {
         gameOver.innerHTML = '21, you win! Game is over!';
+        sum += number*1.5;
+        finalBalance.innerHTML = `${sum}`;
     }
 });
 
@@ -114,6 +129,8 @@ hitButton.addEventListener('click', () => {
     
        if (plrPoint > 21){
         gameOver.innerHTML = "You bust! Game is over. You lost!"
+        sum -= number;
+        finalBalance.innerHTML = `${sum}`;
        }
 });
 
@@ -149,13 +166,21 @@ standButton.addEventListener('click', () => {
             dealerPoints.innerHTML = dlrPoint;
             if (dlrPoint > 21) {
                 gameOver.innerHTML = 'Dealer bust! You win! Game over!';
+                sum += number*2;
+                finalBalance.innerHTML = `${sum}`
             } else {
                 if (dlrPoint > plrPoint) {
                     gameOver.innerHTML = 'Dealer win! Game over!';
+                    sum -= number;
+                    finalBalance.innerHTML = `${sum}`
                 } else if (dlrPoint == plrPoint) {
                     gameOver.innerHTML = "It's a tie!";
+                    sum -= number;
+                    finalBalance.innerHTML = `${sum}` 
                 } else {
                     gameOver.innerHTML = 'You win! Game over!';
+                    sum += number*2;
+                    finalBalance.innerHTML = `${sum}`
                 }
             }
     } else {
@@ -166,14 +191,22 @@ standButton.addEventListener('click', () => {
 
         if (dlrPoint > plrPoint) {
             if (dlrPoint <= 21) {
-                gameOver.innerHTML = 'Dealer win! Game over!'; 
+                gameOver.innerHTML = 'Dealer win! Game over!';
+                sum -= number;
+                finalBalance.innerHTML = `${sum}` 
             } else {
                 gameOver.innerHTML = 'Dealer bust! You win! Game over!';
+                sum += number*2;
+                finalBalance.innerHTML = `${sum}`
             }
         } else if (dlrPoint == plrPoint) {
             gameOver.innerHTML = "It's a tie!";
+            sum -= number;
+            finalBalance.innerHTML = `${sum}`
         } else {
             gameOver.innerHTML = 'You win! Game over!';
+            sum += number*2;
+            finalBalance.innerHTML = `${sum}`
         }
 
         dealerPoints.innerHTML = dlrPoint;
@@ -190,6 +223,9 @@ resetButton.addEventListener('click', ()=> {
     imageDealer.innerHTML = '';
     imagePlayer.innerHTML = '';
     gameOver.innerHTML = '';
+
+    inputValue = '';
+    finalBalance.innerHTML = `${sum}`;
 
     dealButton.removeAttribute('disabled');
     hitButton.removeAttribute('disabled');
