@@ -226,7 +226,7 @@ resetButton.addEventListener('click', ()=> {
         gameOver.innerHTML = 'Stop, get some help';
     } else {
         gameOver.innerHTML = '';
-    }
+    };
 
     inputValue = '';
     finalBalance.innerHTML = `${sum}`;

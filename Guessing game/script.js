@@ -2,9 +2,10 @@
 const button = document.querySelector('button');
 
 let randomNumber = Math.floor(Math.random() * 30) + 1;
-console.log(randomNumber);
 
 function check() {
+    let randomNumber = Math.floor(Math.random() * 30) + 1;
+
     let x = document.querySelector('input');
     let defaultVal = randomNumber;
     let currentVal = x.value;
