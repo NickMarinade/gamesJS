@@ -222,7 +222,11 @@ resetButton.addEventListener('click', ()=> {
     playerPoints.innerHTML = '';
     imageDealer.innerHTML = '';
     imagePlayer.innerHTML = '';
-    gameOver.innerHTML = '';
+    if (sum < 0) {
+        gameOver.innerHTML = 'Stop, get some help';
+    } else {
+        gameOver.innerHTML = '';
+    }
 
     inputValue = '';
     finalBalance.innerHTML = `${sum}`;
